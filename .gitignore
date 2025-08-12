@@ -1,24 +1,35 @@
-# Compiled class file
-*.class
+package inheritance.com;
+class Parent {
+	float height=5.8f;
+	String colour="brown";
+	String noseStructure = "perfect";
+	
+	void readingNewspaper() {
+		System.out.println("Reading NewsPaper.");
+	}
+	
+	void noDrinking() {
+		System.out.println("No Drinking.");
+	}
+	void noSmoking() {
+		System.out.println("No smoking.");
+	}
+}
 
-# Log file
-*.log
+class Child extends Parent {
+	
+}
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+public class EncapsulationDay1 {
+	public static void main(String[] args) {
+		Child c=new Child();
+		
+		System.out.println(c.height);
+		System.out.println(c.colour);
+		System.out.println(c.noseStructure);
+		
+		c.readingNewspaper();
+		c.noDrinking();
+		c.noSmoking();
+	}
+}
